@@ -26,7 +26,7 @@ socket.on('show',(res)=>{
     <div className='body' >
 {
   msg.map((e,i)=>{
-    return <Msg 
+    return <Msg key={i}
     own={uname==e.username?true:false}
     msg={e.text} uname={e.username}/>
   })
