@@ -1,0 +1,25 @@
+{
+  "short_name": "KittyChat",
+  "name": "KittyChat",
+  "icons": [
+    {
+      "src": "happy.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "happy.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "happy.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "white",
+  "background_color": "white"
+}

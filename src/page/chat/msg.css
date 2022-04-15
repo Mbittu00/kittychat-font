@@ -1,0 +1,35 @@
+.mog{
+  float: left;
+  background: #c6e2fb;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 20vw;
+  max-width: 70vw;
+  margin-left: 10px;
+  min-height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+}.hole{
+  font-size: 8px;
+  margin-left: 15px;
+}.txt{
+margin-left: 10px;
+overflow: auto;
+margin-right: 10px;
+}.own{
+  float: right;
+  margin-right: 10px;
+  background: #fee8fd;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 20vw;
+  max-width: 70vw;
+  margin-left: 10px;
+  min-height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+}.der{
+  width: 100vw;
+}

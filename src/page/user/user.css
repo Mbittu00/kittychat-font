@@ -1,0 +1,54 @@
+::placeholder {
+  color: #790fc2;
+  opacity: 1; 
+}
+.user{
+    background: linear-gradient(to bottom right,pink 30%,aqua);
+    height: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+-webkit-box-shadow: 5px 11px 39px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 11px 39px 2px rgba(0,0,0,0.75);
+box-shadow: 5px 11px 39px 2px rgba(0,0,0,0.75);
+width: 90vw;
+}.main{
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(to bottom right,pink 30%,aqua);
+}.name{
+  width: 250px;
+  background: transparent;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid aqua;
+  outline: none;
+  padding: 4px;
+  margin-top: 40px;
+  color: #27a49e;
+}.join-text{
+text-align: center;
+background: -webkit-linear-gradient(#47bb00, #b584fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}.join{
+  width: 100px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px aqua solid;
+  background: transparent;
+  margin-top: 40px;
+  transition: 0.24s;
+}
+.join:focus{
+  width: 170px;
+  color: aqua;
+  border: 3px solid pink;
+  background: pink;
+}

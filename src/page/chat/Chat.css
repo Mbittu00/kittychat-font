@@ -1,0 +1,9 @@
+.Chat{
+  height: 100vh;
+}.body{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}.mb{
+height: 10vh;
+}
