@@ -19,4 +19,15 @@ margin-bottom: 15px;
   outline: none;
   resize: none;
   border: 1px solid;
+  padding-right: 33px;
+}.act{
+  width: 25px;
+  height: 30px;
+  margin-left: 2vw;
+  align-items: center;
+  transform: translate(-40px) rotate(220deg);
+  align-items: center;
+  margin-top: 8px;
+}.file{
+  display: none;
 }

@@ -1,11 +1,12 @@
 
 import './msg.css';
 
-function Msg({own,uname,msg}) {
+function Msg({own,uname,msg,base}) {
   return (
     <div className='der'>
     <div className={own?'own':'mog'}>
-    <p className='txt'>{msg}</p>
+   {base?<img src={base} className='simg'/>: <p className='txt'>{msg}</p>
+   }
     <p className='hole'>{uname}</p>
     </div>
     </div>

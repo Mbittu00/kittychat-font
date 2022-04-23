@@ -13,6 +13,7 @@
 }.hole{
   font-size: 8px;
   margin-left: 15px;
+  margin-bottom: 5px;
 }.txt{
 margin-left: 10px;
 overflow: auto;
@@ -32,4 +33,6 @@ margin-right: 10px;
   justify-content: center;
 }.der{
   width: 100vw;
+}.simg{
+  border-radius: 5px;
 }

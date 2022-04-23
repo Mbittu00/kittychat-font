@@ -9,18 +9,29 @@ let socket;
 function Chat() {
   
   let [msg,setMsg]=useState([])
+  let [online,setOnline]=useState(false)
+  
+  
   let [uname,setUname]=useState(localStorage.getItem('name'))
   useEffect(()=>{
-  socket=io('https://kittyback.herokuapp.com/')
+  socket=io('http://localhost:3030')
+  
+  socket.on('online',(res)=>{
+setOnline(res)
+  })
   
   socket.emit('join',uname)
   
 socket.on('show',(res)=>{
   setMsg(res)
-})
+  console.log(res)
+});
   },[])
   return (
-    <div className="Chat">
+    <>
+{
+  online?
+  <div className="Chat">
     <Head/>
 
     <div className='body' >
@@ -28,14 +39,20 @@ socket.on('show',(res)=>{
   msg.map((e,i)=>{
     return <Msg key={i}
     own={uname==e.username?true:false}
-    msg={e.text} uname={e.username}/>
+    msg={e.text} base={e.base} uname={e.username}/>
   })
 }
 <div className='mb'></div>
     </div>
 
     <Foot/>
+    </div> :
+    <div className='lodeh'>
+    <div className='lode'></div>
+    <p>loading...</p>
     </div>
+}
+</>
   );
 }
 
