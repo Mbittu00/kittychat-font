@@ -14,7 +14,7 @@ function Chat() {
   
   let [uname,setUname]=useState(localStorage.getItem('name'))
   useEffect(()=>{
-  socket=io('http://localhost:3030')
+  socket=io('https://kittyback.herokuapp.com/')
   
   socket.on('online',(res)=>{
 setOnline(res)
