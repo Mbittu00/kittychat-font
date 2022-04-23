@@ -9,8 +9,8 @@ margin-bottom: 15px;
   }.send{
   width: 35px;
   height: 40px;
-  margin-left: 2vw;
   align-items: center;
+  transform: translate(-15px);
 }.msg{
   width: 80vw;
   margin-left: 4vw;
