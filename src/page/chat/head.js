@@ -2,8 +2,10 @@
 import './head.css';
 import './db.css';
 import Pic from'../../img/happy.png'
-import {useState,useEffect}from'react'
+import {useState,useEffect,useContext}from'react'
+import context from'../context/contxt'
 function Head() {
+let api=useContext(context)
   let [sty,setSty]=useState(false)
   let [value,setValue]=useState(false)
   //useEffect
@@ -28,12 +30,14 @@ function Head() {
   //clear
   let clear=()=>{
 localStorage.setItem('msg','')
+api.setCount(api.count+1)
   }
   //change
   let change=()=>{
     let pro=prompt('enter your new name')
     if (pro) {
     localStorage.setItem('name',pro)  
+    api.setCount(api.count+1)
     }else{
       alert('pleace enter name')
     }

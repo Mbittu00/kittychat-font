@@ -3,24 +3,30 @@ import Head from'./head'
 import Foot from'./foot'
 import Msg from'./msg'
 import io from "socket.io-client";
-import {useEffect,useState,useRef}from'react';
-
+import {useEffect,useState,useRef,useContext}from'react';
+import context from'../context/contxt'
 let socket;
 function Chat() {
-  
+  let api=useContext(context)
   let [msg,setMsg]=useState([])
   let [online,setOnline]=useState(false)
   
   
   let [uname,setUname]=useState(localStorage.getItem('name'))
+  //chake username
+  useEffect(()=>{
+ setUname(localStorage.getItem('name'))   
+  },[api.count])
   //set all save msg
   useEffect(()=>{
 let gop=localStorage.getItem('msg')
 if (gop) {
   let js=JSON.parse(gop)
   setMsg(js)
+}else{
+  setMsg([])
 }
-  },[])
+  },[api.count])
   useEffect(()=>{
   socket=io('https://kittyback.herokuapp.com/')
   
