@@ -13,8 +13,16 @@ function Chat() {
   
   
   let [uname,setUname]=useState(localStorage.getItem('name'))
+  //set all save msg
   useEffect(()=>{
-  socket=io('https://kittyback.herokuapp.com/')
+let gop=localStorage.getItem('msg')
+if (gop) {
+  let js=JSON.parse(gop)
+  setMsg(js)
+}
+  },[])
+  useEffect(()=>{
+  socket=io('http://localhost:3030/')
   
   socket.on('online',(res)=>{
 setOnline(res)
@@ -24,9 +32,19 @@ setOnline(res)
   
 socket.on('show',(res)=>{
   setMsg(old=>[...old,res])
-  console.log(res)
 });
   },[])
+  
+//save
+useEffect(()=>{
+  let gop=localStorage.getItem('chake')
+  let js=JSON.parse(gop)
+  if (js) {
+    localStorage.setItem('msg',JSON.stringify(msg))
+  }else{
+    
+  }
+},[msg])
   return (
     <>
 {

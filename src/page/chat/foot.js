@@ -9,7 +9,7 @@ function Foot() {
   let [base,setBase]=useState('')
   
   useEffect(()=>{
-  socket=io('https://kittyback.herokuapp.com/')
+  socket=io('http://localhost:3030/')
 
   },[])
   
@@ -28,6 +28,7 @@ function Foot() {
     setBase(reader.result)
     bos=reader.result;
     //alert(reader.result)
+    console.log(reader.result)
     let username=localStorage.getItem('name')
   socket.emit('file',{username,base:reader.result})
   //setText(reader.result)

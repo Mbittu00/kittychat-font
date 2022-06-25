@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
-.head{
+.head {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -8,10 +8,48 @@
   align-items: center;
   justify-content: space-around;
   background: white;
-}.lc{
-font-family: 'Grape Nuts', cursive;
-}.dp{
-  width: 40px;
-}.on{
+}
+
+.lc {
   font-family: 'Grape Nuts', cursive;
+}
+
+.dp {
+  width: 40px;
+}
+
+.on {
+  font-family: 'Grape Nuts', cursive;
+}
+
+.db {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 70vw;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.box{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}.db>button{
+  border: none;
+  height: 35px;
+  border-radius: 20px;
+  padding: 8px;
 }
