@@ -9,7 +9,7 @@ function Foot() {
   let [base,setBase]=useState('')
   
   useEffect(()=>{
-  socket=io('http://localhost:3030/')
+  socket=io('https://kittyback.herokuapp.com/')
 
   },[])
   
