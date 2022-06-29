@@ -28,7 +28,7 @@ if (gop) {
 }
   },[api.count])
   useEffect(()=>{
-  socket=io('https://kittyback.herokuapp.com/')
+  socket=io('https://kittyback.vercel.app/')
   
   socket.on('online',(res)=>{
 setOnline(res)
