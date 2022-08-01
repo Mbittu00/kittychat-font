@@ -13,6 +13,15 @@ function Chat() {
   
   
   let [uname,setUname]=useState(localStorage.getItem('name'))
+  //set chake
+  useEffect(()=>{
+   if (!localStorage.getItem('chake')) {
+    localStorage.setItem('chake','true') 
+   }else{
+     
+   } 
+  },[])
+
   //chake username
   useEffect(()=>{
  setUname(localStorage.getItem('name'))   
