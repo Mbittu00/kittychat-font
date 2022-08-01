@@ -9,7 +9,7 @@ function Foot() {
   let [base,setBase]=useState('')
   
   useEffect(()=>{
-  socket=io('https://kittyback.vercel.app/')
+  socket=io('https://kittyback.herokuapp.com/')
 
   },[])
   
