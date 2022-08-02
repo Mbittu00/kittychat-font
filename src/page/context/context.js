@@ -1,7 +1,7 @@
 import contxt from'./contxt'
 import {useEffect,useState}from'react';
 import io from "socket.io-client";
-let socket=io('http://10.146.12.71:8900') 
+let socket=io('https://kittybackapp.herokuapp.com/') 
 export default function Context(props) {
   let [online,setOnline]=useState([])
 useEffect(()=>{
