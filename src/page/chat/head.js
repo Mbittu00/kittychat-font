@@ -18,6 +18,8 @@ let api=useContext(context)
     setValue(true)
   }
   },[])
+  //online
+  
   //db
   let db=()=>{
     setSty(!sty)
@@ -45,7 +47,7 @@ api.setCount(api.count+1)
   return (
     <>
     <div className="head">
-        <h4 className='on'>2</h4>
+        <h4 className='on'>{api.online.length}</h4>
     <h3 className='lc'>KittyChat</h3>
    <img src={Pic} className='dp'
    onDoubleClick={db}/>

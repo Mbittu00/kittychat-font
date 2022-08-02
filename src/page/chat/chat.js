@@ -2,12 +2,10 @@ import './Chat.css';
 import Head from'./head'
 import Foot from'./foot'
 import Msg from'./msg'
-import io from "socket.io-client";
 import {useEffect,useState,useRef,useContext}from'react';
 import context from'../context/contxt'
-let socket;
 function Chat() {
-  let api=useContext(context)
+  let {socket,count}=useContext(context)
   let [msg,setMsg]=useState([])
   let [online,setOnline]=useState(false)
   
@@ -25,7 +23,7 @@ function Chat() {
   //chake username
   useEffect(()=>{
  setUname(localStorage.getItem('name'))   
-  },[api.count])
+  },[count])
   //set all save msg
   useEffect(()=>{
 let gop=localStorage.getItem('msg')
@@ -35,9 +33,8 @@ if (gop) {
 }else{
   setMsg([])
 }
-  },[api.count])
+  },[count])
   useEffect(()=>{
-  socket=io('https://kittyback.herokuapp.com/')
   
   socket.on('online',(res)=>{
 setOnline(res)
